@@ -35,4 +35,14 @@ export class HomeComponent implements OnInit {
       });
 
     }
+    
+  SearchUsuario(event : Event){
+      const target = event.target as HTMLInputElement;
+      const valor = target.value.toLowerCase();
+
+      this.Listausuarios = this.ListausuariosGeral.filter(retornousuario =>{
+        return retornousuario.nome.toLowerCase().includes(valor);
+      })
+  }
 }
+
