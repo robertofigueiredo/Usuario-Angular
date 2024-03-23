@@ -1,5 +1,5 @@
 <div class="usuario-box">
-    <button>Cadastrar novo funcionário</button>
+    <button [routerLink]="['/cadastro']" routerLinkActive="router-link-active" >Cadastrar novo funcionário</button>
     <div class="input-box">
         <label>Procurar</label>
         <input type="text" placeholder="Qual Usuário você está buscando?" (input)="SearchUsuario($event)">
