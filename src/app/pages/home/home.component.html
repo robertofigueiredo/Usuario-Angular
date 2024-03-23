@@ -11,15 +11,17 @@
         <tr></tr>
         <th>Nome</th>
         <th>Sobrenome</th>
+        <th></th>
+        <th></th>
     </thead>
-    <tbody>
+    <tbody *ngFor="let usuarios of Listausuarios">
         <tr>
             <td>
                 <img src="assets/images/Ativo.png" style="height: 20px; width: 20px;">
                 <img src="assets/images/Inativo.png" style="height: 20px; width: 20px;">
             </td>
-            <td>Roberto</td>
-            <td>Rodrigues</td>
+            <td>{{usuarios.nome}}</td>
+            <td>{{usuarios.sobrenome}}</td>
             <td>
                 <button>Editar</button>
                 <button>Detalhes</button>

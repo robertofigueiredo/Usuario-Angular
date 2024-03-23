@@ -6,14 +6,13 @@ import { Usuario } from '../models/Usuario';
 import { Response } from '../models/Response';
 
 
-
-
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsuarioService {
 
-  private apiUrl = `${environment.ApiUrl}/Usuario`
+  private apiUrl = `${environment.ApiUrl}/BuscarTodosUsuario`
 
   constructor( private http: HttpClient) { }
 

@@ -3,5 +3,6 @@ export interface Usuario{
     nome: string;
     sobrenome: string;
     ativo: boolean;
-    datadecriacao: string;
+    dataDeCriacao?:string,
+    dataDeAlteracao?: string,
 }
