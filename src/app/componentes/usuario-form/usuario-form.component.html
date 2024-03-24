@@ -1,0 +1,39 @@
+<h1>Cadastro Usuário</h1>
+
+<form [formGroup]="usuarioForm" (submit)="CadastrarUsuario()" #formDit="ngForm">
+    <div class="input_box">
+        <label>Nome:</label>
+        <input type="text"  formControlName="nome" placeholder="Insira o nome!" required>
+    </div>
+
+    <div class="input_box">
+        <label>Sobrenome:</label>
+        <input type="text"  formControlName="sobrenome" placeholder="Insira o sobrenome!" required>
+    </div>
+
+    <div class="input_box">
+        <label>Departamento:</label>
+        <select id="departamento" required formControlName="departamento">
+            <option value="rh">RH</option>
+            <option value="Financeiro">Financeiro</option>
+            <option value="Comercial">Comercial</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Operacional">Operacional</option>
+        </select>
+    </div>
+
+    <div class="input_box">
+        <label>Turno:</label>
+        <select id="turno" required formControlName="turno">
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+            <option value="Integral">Integral</option>
+        </select>
+    </div>
+
+    <div class="btn_box">
+        <button type="submit">Cadastrar</button>
+        <button>Voltar</button>
+    </div>
+</form>

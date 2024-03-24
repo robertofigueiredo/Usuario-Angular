@@ -19,4 +19,8 @@ export class UsuarioService {
   GetUsuarios() : Observable<Response<Usuario[]>>{
     return this.http.get<Response<Usuario[]>>(this.apiUrl);
   }
+
+  CreateUsuario(usuario : Usuario) : Observable<Response<Usuario[]>>{
+    return this.http.post<Response<Usuario[]>>(`${environment.ApiUrl}/IncluirUsuario`,usuario)
+  }
 }
