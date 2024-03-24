@@ -1,19 +1,22 @@
-import { Component, EventEmitter, OnInit, Output, output } from '@angular/core';
-import { FormControl, FormGroup, FormsModule } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output, input, output } from '@angular/core';
+import { FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Usuario } from '../../models/Usuario';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-usuario-form',
   standalone: true,
-  imports: [ReactiveFormsModule,FormsModule],
+  imports: [ReactiveFormsModule,FormsModule,RouterLink],
   templateUrl: './usuario-form.component.html',
   styleUrl: './usuario-form.component.css'
 })
 export class UsuarioFormComponent implements OnInit {
 
   @Output() onCadastrarUsuario = new EventEmitter<Usuario>();
+  @Input() btnAcao! : string;
+  @Input() btnTitulo! : string;
 
   usuarioForm! : FormGroup;
 
@@ -24,13 +27,13 @@ export class UsuarioFormComponent implements OnInit {
     
       this.usuarioForm = new FormGroup({
             id: new FormControl(0),
-            nome: new FormControl(''),
-            sobrenome: new FormControl(''),
+            nome: new FormControl('', [Validators.required]),
+            sobrenome: new FormControl('', [Validators.required]),
+            turno: new FormControl('', [Validators.required]),
+            departamento: new FormControl('', [Validators.required]),
             ativo: new FormControl(true),
             dataDeCriacao:new FormControl(new Date()),
             dataDeAlteracao: new FormControl(new Date()),
-            turno: new FormControl(''),
-            departamento: new FormControl(''),
     
       });
 

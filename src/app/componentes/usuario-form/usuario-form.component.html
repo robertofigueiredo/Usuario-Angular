@@ -1,4 +1,4 @@
-<h1>Cadastro Usuário</h1>
+<h1>{{btnTitulo}}</h1>
 
 <form [formGroup]="usuarioForm" (submit)="CadastrarUsuario()" #formDit="ngForm">
     <div class="input_box">
@@ -33,7 +33,7 @@
     </div>
 
     <div class="btn_box">
-        <button type="submit">Cadastrar</button>
-        <button>Voltar</button>
+        <button type="submit" [disabled]="!usuarioForm.valid">{{btnAcao}}</button>
+        <button [routerLink]="['']" routerLinkActive="router-link-active"  >Voltar</button>
     </div>
 </form>

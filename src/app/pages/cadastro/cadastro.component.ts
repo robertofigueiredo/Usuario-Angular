@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 })
 export class CadastroComponent {
 
+    btnAcao = "Cadastrar";
+    btnTitulo = "Cadastrar Usuário";
 
     constructor(private usuarioService : UsuarioService, private router : Router) {
         
