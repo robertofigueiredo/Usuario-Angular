@@ -1,6 +1,9 @@
 <h1>{{btnTitulo}}</h1>
 
 <form [formGroup]="usuarioForm" (submit)="CadastrarUsuario()" #formDit="ngForm">
+
+    <input type="hidden" formControlName="id">
+
     <div class="input_box">
         <label>Nome:</label>
         <input type="text"  formControlName="nome" placeholder="Insira o nome!" required>
@@ -25,7 +28,7 @@
     <div class="input_box">
         <label>Turno:</label>
         <select id="turno" required formControlName="turno">
-            <option value="Manhã">Manhã</option>
+            <option value="Manha">Manhã</option>
             <option value="Tarde">Tarde</option>
             <option value="Noite">Noite</option>
             <option value="Integral">Integral</option>

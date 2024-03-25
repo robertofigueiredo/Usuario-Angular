@@ -12,7 +12,7 @@ import { Response } from '../models/Response';
 
 export class UsuarioService {
 
-  private apiUrl = `${environment.ApiUrl}/BuscarTodosUsuario`
+  private apiUrl = `${environment.ApiUrl}/GetAllUsuario`
 
   constructor( private http: HttpClient) { }
 
@@ -20,7 +20,15 @@ export class UsuarioService {
     return this.http.get<Response<Usuario[]>>(this.apiUrl);
   }
 
+  GetUsuarioFiltro(id : number) : Observable<Response<Usuario>> {
+    return this.http.get<Response<Usuario>>(`${environment.ApiUrl}/GetIdUsuario/${id}`);
+  }
+
   CreateUsuario(usuario : Usuario) : Observable<Response<Usuario[]>>{
-    return this.http.post<Response<Usuario[]>>(`${environment.ApiUrl}/IncluirUsuario`,usuario)
+    return this.http.post<Response<Usuario[]>>(`${environment.ApiUrl}/CreateUsuario`,usuario)
+  }
+
+  EditarUsuario(usuario : Usuario) : Observable<Response<Usuario[]>>{
+    return this.http.put<Response<Usuario[]>>(`${environment.ApiUrl}/UpdateUsuario`,usuario)
   }
 }

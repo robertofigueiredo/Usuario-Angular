@@ -1,1 +1,6 @@
-<p>editar works!</p>
+<div *ngIf="dadosUsuario">
+    <app-usuario-form [btnAcao]="btnAcao" 
+                      [btnTitulo]="btnTitulo" 
+                      [dadosUsuario]="dadosUsuario"
+                      (onCadastrarUsuario)="CadastrarNovoUsuario($event)"></app-usuario-form>
+</div>
