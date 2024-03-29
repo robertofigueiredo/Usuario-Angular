@@ -1,42 +1,49 @@
+<mat-card>
 <h1>{{btnTitulo}}</h1>
 
 <form [formGroup]="usuarioForm" (submit)="CadastrarUsuario()" #formDit="ngForm">
 
     <input type="hidden" formControlName="id">
+    
+    <div class="input-box">
+        <mat-form-field>
+          <mat-label>Nome:</mat-label>
+          <input matInput id="nome" type="text" class="form-control text-dark" formControlName="nome" placeholder="Insira o nome!" required>
+        </mat-form-field>
+      </div>
+    
+      <div  class="input-box">
+        <mat-form-field>
+          <mat-label>Sobrenome:</mat-label>
+             <input matInput id="sobrenome" type="text" class="form-control  text-dark" formControlName="sobrenome" placeholder="Insira o sobrenome!" required>
+         </mat-form-field>
+      </div>
+    
+      <div  class="input-box">
+      <mat-form-field>
+        <mat-label>Departamento:</mat-label>
+        <mat-select id="departamento" class="form-select "  formControlName="departamento" required>
+          <mat-option value="RH">RH</mat-option>
+          <mat-option value="Financeiro">Financeiro</mat-option>
+          <mat-option value="Compras">Compras</mat-option>
+          <mat-option value="Atendimento">Atendimento</mat-option>
+          <mat-option value="Zeladoria">Zeladoria</mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      </div>
+      <mat-form-field>
+        <mat-label>Turno</mat-label>
+        <mat-select id="turno" class="form-select"  formControlName="turno" required>
+          <mat-option value="Manha">Manha</mat-option>
+          <mat-option value="Tarde">Tarde</mat-option>
+          <mat-option value="Noite">Noite</mat-option>
+        </mat-select>
+      </mat-form-field>
 
-    <div class="input_box">
-        <label>Nome:</label>
-        <input type="text"  formControlName="nome" placeholder="Insira o nome!" required>
-    </div>
-
-    <div class="input_box">
-        <label>Sobrenome:</label>
-        <input type="text"  formControlName="sobrenome" placeholder="Insira o sobrenome!" required>
-    </div>
-
-    <div class="input_box">
-        <label>Departamento:</label>
-        <select id="departamento" required formControlName="departamento">
-            <option value="rh">RH</option>
-            <option value="Financeiro">Financeiro</option>
-            <option value="Comercial">Comercial</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Operacional">Operacional</option>
-        </select>
-    </div>
-
-    <div class="input_box">
-        <label>Turno:</label>
-        <select id="turno" required formControlName="turno">
-            <option value="Manha">Manhã</option>
-            <option value="Tarde">Tarde</option>
-            <option value="Noite">Noite</option>
-            <option value="Integral">Integral</option>
-        </select>
-    </div>
-
-    <div class="btn_box">
-        <button type="submit" [disabled]="!usuarioForm.valid">{{btnAcao}}</button>
-        <button [routerLink]="['']" routerLinkActive="router-link-active"  >Voltar</button>
+      <div class="btn_box">
+        <button type="submit"  class="btn btn-success w-50" [disabled]="!usuarioForm.valid" mat-raised-button color="primary">{{btnAcao}}</button>
+        <button [routerLink]="['']" class="btn btn-success w-50" routerLinkActive="router-link-active"  mat-raised-button>Voltar</button>
     </div>
 </form>
+</mat-card>

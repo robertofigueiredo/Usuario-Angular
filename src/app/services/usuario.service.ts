@@ -31,4 +31,8 @@ export class UsuarioService {
   EditarUsuario(usuario : Usuario) : Observable<Response<Usuario[]>>{
     return this.http.put<Response<Usuario[]>>(`${environment.ApiUrl}/UpdateUsuario`,usuario)
   }
+
+  ExcluirUsuario(id : number) : Observable<Response<Usuario[]>>{
+    return this.http.delete<Response<Usuario[]>>(`${environment.ApiUrl}/DeleteUsuario/${id}`);
+  }
 }

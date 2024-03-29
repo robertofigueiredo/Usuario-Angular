@@ -1,0 +1,11 @@
+mat-card{
+    width: 450px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 3rem;
+    margin-top: 5rem;
+    overflow: hidden;
+}

@@ -30,7 +30,7 @@ export class EditarComponent implements OnInit{
         })
     }
 
-    CadastrarNovoUsuario(usuario : Usuario){
+    IncluirNovoUsuario(usuario : Usuario){
         this._usuarioService.EditarUsuario(usuario).subscribe((data) =>{
             this.router.navigate(['/'])
         })

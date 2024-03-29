@@ -1,13 +1,23 @@
-import { Component, EventEmitter, Input, OnInit, Output, input, output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { FormControl, FormGroup, FormsModule, Validators,ReactiveFormsModule } from '@angular/forms';
 import { Usuario } from '../../models/Usuario';
 import { RouterLink } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import {MatCardModule} from  '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @Component({
   selector: 'app-usuario-form',
   standalone: true,
-  imports: [ReactiveFormsModule,FormsModule,RouterLink],
+  imports: [ReactiveFormsModule,
+            FormsModule,
+            RouterLink, 
+            MatButtonModule,
+            MatCardModule,
+            MatInputModule,
+            MatSelectModule],
   templateUrl: './usuario-form.component.html',
   styleUrl: './usuario-form.component.css'
 })

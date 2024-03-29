@@ -1,0 +1,13 @@
+  <div *ngIf="usuario">
+    <mat-label>Deseja confirmar a exclusão?</mat-label>
+    <mat-card-content>
+      <h2 style="font-weight: bold;">Funcionário:</h2>
+      <p>{{usuario.nome}} {{usuario.sobrenome}}</p>
+      <h2 style="font-weight: bold;">Departamento:</h2>
+      <p>{{usuario.departamento}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="excluir()">Confirmar</button>
+      <button mat-raised-button (click)="cancelar()">Voltar</button>
+    </mat-card-actions>
+  </div>
