@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class EditarComponent implements OnInit{
     btnAcao : string = "Salvar"
-    btnTitulo : string = "Editar Usuário"
+    btnTitulo : string = "Editar Produto"
     dadosUsuario! : Usuario
     $event: any;
 

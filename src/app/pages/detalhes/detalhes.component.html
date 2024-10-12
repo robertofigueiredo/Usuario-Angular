@@ -1,6 +1,6 @@
 <mat-card>
 <div>
-    <h1>Detalhes do Usuário</h1>
+    <h1>Detalhes do Pedido</h1>
 </div>
 
 <div *ngIf="usuario">
@@ -11,40 +11,29 @@
             <input matInput type="text" class="form-control text-dark" value="{{usuario.nome}}" disabled>
         </div>
     </mat-form-field>
-    <div class="input_box">
-        <mat-form-field>
-          <mat-label>Nome:</mat-label>
-         <input matInput type="text" class="form-control text-dark" value="{{usuario.nome}}" disabled>
-          </mat-form-field>
-      </div>
+  
       
       <div  class="input_box">
         <mat-form-field>
-          <mat-label>Sobrenome:</mat-label>
+          <mat-label>Identificação:</mat-label>
           <input matInput type="text" class="form-control  text-dark" value="{{usuario.sobrenome}}" disabled>
           </mat-form-field>
       </div>
       
       <div  class="input_box">
         <mat-form-field>
-          <mat-label>Departamento:</mat-label>
+          <mat-label>Item:</mat-label>
           <input matInput type="text" class="form-control  text-dark" id="Livro" value="{{usuario.departamento}}" disabled>
           </mat-form-field>
       </div>
       
       <div  class="input_box">
         <mat-form-field>
-          <mat-label>Turno:</mat-label>
+          <mat-label>Situação:</mat-label>
           <input matInput type="text" class="form-control  text-dark" asp-for="LivroEmprestado" id="Livro" value="{{usuario.turno}}" disabled>
           </mat-form-field>
       </div>
-      
-      <div  class="input_box">
-        <mat-form-field>
-          <mat-label>Situação:</mat-label>
-          <input matInput type="text" class="form-control  text-dark" asp-for="LivroEmprestado" id="Livro" value="{{usuario.ativo == true ? 'Ativo' : 'Inativo'}}" disabled>
-          </mat-form-field>
-      </div>
+
       
       
       <div  class="input_box">

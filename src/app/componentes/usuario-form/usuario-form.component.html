@@ -14,30 +14,29 @@
     
       <div  class="input-box">
         <mat-form-field>
-          <mat-label>Sobrenome:</mat-label>
+          <mat-label>Identificação:</mat-label>
              <input matInput id="sobrenome" type="text" class="form-control  text-dark" formControlName="sobrenome" placeholder="Insira o sobrenome!" required>
          </mat-form-field>
       </div>
     
       <div  class="input-box">
       <mat-form-field>
-        <mat-label>Departamento:</mat-label>
+        <mat-label>Opções de Produto:</mat-label>
         <mat-select id="departamento" class="form-select "  formControlName="departamento" required>
-          <mat-option value="RH">RH</mat-option>
-          <mat-option value="Financeiro">Financeiro</mat-option>
-          <mat-option value="Compras">Compras</mat-option>
-          <mat-option value="Atendimento">Atendimento</mat-option>
-          <mat-option value="Zeladoria">Zeladoria</mat-option>
+          <mat-option value="RH">Fones de ouvido sem fio</mat-option>
+          <mat-option value="Financeiro">Garrafas reutilizáveis de aço inoxidável</mat-option>
+          <mat-option value="Compras">Carregadores portáteis (power banks)</mat-option>
+          <mat-option value="Atendimento">Tapetes de ioga ecológicos</mat-option>
+          <mat-option value="Zeladoria">Kits de talheres e canudos reutilizáveis</mat-option>
         </mat-select>
       </mat-form-field>
     
       </div>
       <mat-form-field>
-        <mat-label>Turno</mat-label>
+        <mat-label>Situação</mat-label>
         <mat-select id="turno" class="form-select"  formControlName="turno" required>
-          <mat-option value="Manha">Manha</mat-option>
-          <mat-option value="Tarde">Tarde</mat-option>
-          <mat-option value="Noite">Noite</mat-option>
+          <mat-option value="Manha">Ativo</mat-option>
+          <mat-option value="Tarde">Desativado</mat-option>
         </mat-select>
       </mat-form-field>
 
